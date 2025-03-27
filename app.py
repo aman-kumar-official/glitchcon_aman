@@ -196,7 +196,7 @@ def index():
     if os.path.exists(app.config['UPLOAD_FOLDER']):
         upload_files = [f for f in os.listdir(app.config['UPLOAD_FOLDER']) if f.endswith('.csv')]
     
-    return render_template('index.html', capture_files=capture_files, upload_files=upload_files)
+    return render_template('index2.html', capture_files=capture_files, upload_files=upload_files)
 
 @app.route('/analyze/<filename>', methods=['GET'])
 def analyze(filename):
